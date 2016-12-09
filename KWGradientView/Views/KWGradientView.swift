@@ -44,7 +44,7 @@ open class KWGradientView: UIView {
     return gradient
   }
 
-  open func updateDiagonalGradient(_ layer: CAGradientLayer, colors: [UIColor]) {
+  open func animateGradient(_ layer: CAGradientLayer, to colors: [UIColor]) {
     UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
       CATransaction.begin()
       CATransaction.setAnimationDuration(1.0)

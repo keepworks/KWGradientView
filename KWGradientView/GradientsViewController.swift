@@ -10,15 +10,26 @@ import UIKit
 
 class GradientsViewController: UIViewController {
 
+  // MARK: - Constants
+  let gradientColors = [
+    [UIColor.red, UIColor.green, UIColor.blue],
+    [UIColor.green, UIColor.blue, UIColor.red],
+    [UIColor.blue, UIColor.red, UIColor.green]
+  ]
+  
   // MARK: - IBOutlets
   @IBOutlet weak var horizontalGradientView: KWGradientView!
   @IBOutlet weak var diagonalGradientView: KWGradientView!
   @IBOutlet weak var verticalGradientView: KWGradientView!
 
   // MARK: - Variables
+  var horizontalGradientLayer: CAGradientLayer!
   var diagonalGradientLayer: CAGradientLayer!
-  var currentIndex = 0
-
+  var verticalGradientLayer: CAGradientLayer!
+  var horizontalIndex = 0
+  var diagonalIndex = 0
+  var verticalIndex = 0
+  
   // MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -27,27 +38,39 @@ class GradientsViewController: UIViewController {
   }
 
   // MARK: - IBActions
-  @IBAction func updateDiagonalGradient(_ sender: Any) {
-    let gradientColors = [
-      [UIColor.red, UIColor.green, UIColor.blue],
-      [UIColor.green, UIColor.blue, UIColor.red],
-      [UIColor.blue, UIColor.red, UIColor.green]
-    ]
+  @IBAction func updateHorizontalGradient(_ sender: Any) {
+    horizontalIndex += 1
+    if horizontalIndex > 2 {
+      horizontalIndex = 0
+    }
+    
+    horizontalGradientView.animateGradient(horizontalGradientLayer, to: gradientColors[horizontalIndex])
+  }
 
-    currentIndex += 1
-    if currentIndex > 2 {
-      currentIndex = 0
+  @IBAction func updateDiagonalGradient(_ sender: Any) {
+    diagonalIndex += 1
+    if diagonalIndex > 2 {
+      diagonalIndex = 0
     }
 
-    diagonalGradientView.updateDiagonalGradient(diagonalGradientLayer, colors: gradientColors[currentIndex])
+    diagonalGradientView.animateGradient(diagonalGradientLayer, to: gradientColors[diagonalIndex])
+  }
+
+  @IBAction func updateVerticalGradient(_ sender: Any) {
+    verticalIndex += 1
+    if verticalIndex > 2 {
+      verticalIndex = 0
+    }
+    
+    verticalGradientView.animateGradient(verticalGradientLayer, to: gradientColors[verticalIndex])
   }
 
   // MARK: - Private Methods
   private func configureGradients() {
     let gradientColors = [UIColor.red, UIColor.green, UIColor.blue]
-    _ = horizontalGradientView.addGradientLayerAlongXAxis(colors: gradientColors)
+    horizontalGradientLayer = horizontalGradientView.addGradientLayerAlongXAxis(colors: gradientColors)
     diagonalGradientLayer = diagonalGradientView.addDiagonalGradient(colors: gradientColors)
-    _ = verticalGradientView.addGradientLayerAlongYAxis(colors: gradientColors)
+    verticalGradientLayer = verticalGradientView.addGradientLayerAlongYAxis(colors: gradientColors)
   }
 }
 

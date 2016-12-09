@@ -51,30 +51,64 @@
                                     <constraint firstAttribute="width" constant="240" id="IJr-1l-Rzm"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5Z-e6-CXV" userLabel="updateDiagonalGradientButton">
-                                <rect key="frame" x="98" y="586" width="178" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKi-6B-seD">
+                                <rect key="frame" x="156" y="570.5" width="63" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vu2-Z4-vPB" userLabel="horizontalGradientButton">
+                                <rect key="frame" x="0.0" y="600.5" width="125" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hfG-KF-lSy"/>
+                                </constraints>
+                                <state key="normal" title="Horizontal"/>
+                                <connections>
+                                    <action selector="updateHorizontalGradient:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xTm-pX-7ds"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5Z-e6-CXV" userLabel="diagonalGradientButton">
+                                <rect key="frame" x="125" y="600.5" width="125" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="geb-qz-atA"/>
-                                    <constraint firstAttribute="width" constant="178" id="gyr-kV-2fI"/>
                                 </constraints>
-                                <state key="normal" title="Update Diagonal Gradient"/>
+                                <state key="normal" title="Diagonal"/>
                                 <connections>
                                     <action selector="updateDiagonalGradient:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Sr-4Y-AP0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpW-Ha-gtx" userLabel="verticalGradientButton">
+                                <rect key="frame" x="250" y="600.5" width="125" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7QJ-0L-XPG"/>
+                                </constraints>
+                                <state key="normal" title="Vertical"/>
+                                <connections>
+                                    <action selector="updateVerticalGradient:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FL9-jF-W63"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.61176470589999998" green="0.65098039220000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="q5Z-e6-CXV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8No-AX-Waq"/>
+                            <constraint firstItem="AKi-6B-seD" firstAttribute="top" secondItem="CaR-uH-aMv" secondAttribute="bottom" constant="15" id="5DZ-U6-itG"/>
+                            <constraint firstItem="Vu2-Z4-vPB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DEl-wt-GON"/>
                             <constraint firstItem="CTw-9n-beb" firstAttribute="top" secondItem="qA2-df-wIU" secondAttribute="bottom" constant="30" id="GpJ-Bm-Sn3"/>
                             <constraint firstItem="CaR-uH-aMv" firstAttribute="top" secondItem="CTw-9n-beb" secondAttribute="bottom" constant="30" id="IzL-o0-LlR"/>
+                            <constraint firstItem="hpW-Ha-gtx" firstAttribute="top" secondItem="q5Z-e6-CXV" secondAttribute="top" id="Q2f-N9-Kh6"/>
                             <constraint firstItem="qA2-df-wIU" firstAttribute="top" secondItem="apX-RG-nFf" secondAttribute="bottom" constant="30" id="VQd-k1-MEz"/>
+                            <constraint firstItem="Vu2-Z4-vPB" firstAttribute="width" secondItem="q5Z-e6-CXV" secondAttribute="width" id="VtU-pL-FJe"/>
+                            <constraint firstItem="Vu2-Z4-vPB" firstAttribute="top" secondItem="q5Z-e6-CXV" secondAttribute="top" id="X5k-WB-Igg"/>
                             <constraint firstItem="CTw-9n-beb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xkg-6g-a9U"/>
                             <constraint firstItem="CTw-9n-beb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ano-8d-ag0"/>
+                            <constraint firstItem="q5Z-e6-CXV" firstAttribute="leading" secondItem="Vu2-Z4-vPB" secondAttribute="trailing" id="b1X-HI-m63"/>
                             <constraint firstItem="apX-RG-nFf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cUK-kw-LXQ"/>
+                            <constraint firstItem="q5Z-e6-CXV" firstAttribute="width" secondItem="hpW-Ha-gtx" secondAttribute="width" id="dex-DH-Z63"/>
                             <constraint firstItem="CaR-uH-aMv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fh3-e3-A60"/>
+                            <constraint firstItem="hpW-Ha-gtx" firstAttribute="leading" secondItem="q5Z-e6-CXV" secondAttribute="trailing" id="gdm-I2-vne"/>
+                            <constraint firstItem="AKi-6B-seD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hgL-Ps-dqy"/>
                             <constraint firstItem="qA2-df-wIU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kF4-7i-twL"/>
-                            <constraint firstItem="q5Z-e6-CXV" firstAttribute="top" secondItem="CaR-uH-aMv" secondAttribute="bottom" constant="30" id="qWB-db-GPX"/>
+                            <constraint firstAttribute="trailing" secondItem="hpW-Ha-gtx" secondAttribute="trailing" id="mjG-6Z-t1c"/>
+                            <constraint firstItem="q5Z-e6-CXV" firstAttribute="top" secondItem="CaR-uH-aMv" secondAttribute="bottom" constant="45" id="qWB-db-GPX"/>
                         </constraints>
                     </view>
                     <connections>
@@ -85,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-391" y="-113"/>
+            <point key="canvasLocation" x="-391.19999999999999" y="-113.79310344827587"/>
         </scene>
     </scenes>
 </document>
