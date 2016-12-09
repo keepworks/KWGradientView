@@ -17,10 +17,14 @@ it, simply add the following line to your Podfile:
 pod "KWGradientView"
 ```
 
-## Author
+## Meta
 
-Pavan Kotesh, pavan@keepworks.com
+Maintained by [KeepWorks](http://www.keepworks.com/)
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/keepworks/KWGradientView.
 
 ## License
 
-KWGradientView is available under the MIT license. See the LICENSE file for more info.
+KWGradientView is available under the [MIT License](http://opensource.org/licenses/MIT). See the LICENSE file for more info.
