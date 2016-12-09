@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary          = 'Subclass of UIView to add gradient to your views'
 
   s.description      = <<-DESC
-Create Horizontal, Vertical & diagonal gradients on your view using this UIView subclass.
+Create horizontal, vertical & diagonal gradients on your view using this UIView subclass.
                        DESC
 
   s.homepage         = 'https://github.com/keepworks/KWGradientView'
