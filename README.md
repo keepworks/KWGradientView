@@ -1,6 +1,6 @@
 # KWGradientView
 
-<img src="screenshot.png" width="187" height="333">
+<img src="screencast.gif" width="187" height="333">
 
 ## Features
 
