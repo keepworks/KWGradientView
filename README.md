@@ -2,10 +2,6 @@
 
 <img src="screenshot.png" width="187" height="333">
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## Features
 
 - [x] Horizontal, vertical & diagonal gradients
@@ -24,6 +20,9 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "KWGradientView"
 ```
+## How to use
+
+All the methods in the pod are implemented in `GradientsViewController.swift` for your reference.
 
 ## Meta
 
