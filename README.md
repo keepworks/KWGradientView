@@ -6,7 +6,15 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## Features
+
+- [x] Horizontal, vertical & diagonal gradients
+- [x] Animate gradients by changing colors 
+
 ## Requirements
+
+- iOS 8.0 or later
+- Swift 3.0
 
 ## Installation
 
