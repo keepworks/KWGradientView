@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	@IBOutlet weak var gradientView: KWGradientView!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+
+		_ = gradientView.addDiagonalGradient(colors: [UIColor.red, UIColor.gray, UIColor.green])
 	}
 
 	override func didReceiveMemoryWarning() {

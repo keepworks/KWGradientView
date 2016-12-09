@@ -12,6 +12,7 @@
 		D1FB3BC51DFA879800476FD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1FB3BC31DFA879800476FD8 /* Main.storyboard */; };
 		D1FB3BC71DFA879800476FD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1FB3BC61DFA879800476FD8 /* Assets.xcassets */; };
 		D1FB3BCA1DFA879800476FD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1FB3BC81DFA879800476FD8 /* LaunchScreen.storyboard */; };
+		D1FB3BD31DFA880000476FD8 /* KWGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FB3BD21DFA880000476FD8 /* KWGradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		D1FB3BC61DFA879800476FD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1FB3BC91DFA879800476FD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1FB3BCB1DFA879800476FD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1FB3BD21DFA880000476FD8 /* KWGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWGradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		D1FB3BBE1DFA879800476FD8 /* KWGradientView */ = {
 			isa = PBXGroup;
 			children = (
+				D1FB3BD11DFA880000476FD8 /* Views */,
 				D1FB3BBF1DFA879800476FD8 /* AppDelegate.swift */,
 				D1FB3BC11DFA879800476FD8 /* ViewController.swift */,
 				D1FB3BC31DFA879800476FD8 /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				D1FB3BCB1DFA879800476FD8 /* Info.plist */,
 			);
 			path = KWGradientView;
+			sourceTree = "<group>";
+		};
+		D1FB3BD11DFA880000476FD8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D1FB3BD21DFA880000476FD8 /* KWGradientView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1FB3BC21DFA879800476FD8 /* ViewController.swift in Sources */,
+				D1FB3BD31DFA880000476FD8 /* KWGradientView.swift in Sources */,
 				D1FB3BC01DFA879800476FD8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
