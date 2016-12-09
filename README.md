@@ -1,5 +1,7 @@
 # KWGradientView
 
+<img src="screenshot.png" width="187" height="333">
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
