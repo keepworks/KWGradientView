@@ -12,7 +12,7 @@ Create horizontal, vertical & diagonal gradients on your view using this UIView 
   s.author           = { 'Pavan Kotesh' => 'pavan@keepworks.com' }
   s.source           = { :git => 'https://github.com/keepworks/KWGradientView.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '8.0'
   s.source_files = 'KWGradientView/Views/KWGradientView.swift'
 
 end
