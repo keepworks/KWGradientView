@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Gradients View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KWGradientView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gradientsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="GradientsViewController" customModule="KWGradientView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,7 +21,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTw-9n-beb" userLabel="gradientView" customClass="KWGradientView" customModule="KWGradientView" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KWGradientView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apX-RG-nFf">
+                                <rect key="frame" x="119.5" y="60.5" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qA2-df-wIU" userLabel="horizontalGradientView" customClass="KWGradientView" customModule="KWGradientView" customModuleProvider="target">
+                                <rect key="frame" x="67" y="111.5" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="5HN-zm-zES"/>
+                                    <constraint firstAttribute="width" constant="240" id="stc-p9-MfV"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTw-9n-beb" userLabel="diagonalGradientView" customClass="KWGradientView" customModule="KWGradientView" customModuleProvider="target">
                                 <rect key="frame" x="67" y="269.5" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -29,19 +43,49 @@
                                     <constraint firstAttribute="width" constant="240" id="8lO-t1-XDZ"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CaR-uH-aMv" userLabel="verticalGradientView" customClass="KWGradientView" customModule="KWGradientView" customModuleProvider="target">
+                                <rect key="frame" x="67" y="427.5" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="EsS-0K-fab"/>
+                                    <constraint firstAttribute="width" constant="240" id="IJr-1l-Rzm"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5Z-e6-CXV" userLabel="updateDiagonalGradientButton">
+                                <rect key="frame" x="98" y="586" width="178" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="geb-qz-atA"/>
+                                    <constraint firstAttribute="width" constant="178" id="gyr-kV-2fI"/>
+                                </constraints>
+                                <state key="normal" title="Update Diagonal Gradient"/>
+                                <connections>
+                                    <action selector="updateDiagonalGradient:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Sr-4Y-AP0"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.61176470589999998" green="0.65098039220000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="q5Z-e6-CXV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8No-AX-Waq"/>
+                            <constraint firstItem="CTw-9n-beb" firstAttribute="top" secondItem="qA2-df-wIU" secondAttribute="bottom" constant="30" id="GpJ-Bm-Sn3"/>
+                            <constraint firstItem="CaR-uH-aMv" firstAttribute="top" secondItem="CTw-9n-beb" secondAttribute="bottom" constant="30" id="IzL-o0-LlR"/>
+                            <constraint firstItem="qA2-df-wIU" firstAttribute="top" secondItem="apX-RG-nFf" secondAttribute="bottom" constant="30" id="VQd-k1-MEz"/>
                             <constraint firstItem="CTw-9n-beb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xkg-6g-a9U"/>
                             <constraint firstItem="CTw-9n-beb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ano-8d-ag0"/>
+                            <constraint firstItem="apX-RG-nFf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cUK-kw-LXQ"/>
+                            <constraint firstItem="CaR-uH-aMv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fh3-e3-A60"/>
+                            <constraint firstItem="qA2-df-wIU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kF4-7i-twL"/>
+                            <constraint firstItem="q5Z-e6-CXV" firstAttribute="top" secondItem="CaR-uH-aMv" secondAttribute="bottom" constant="30" id="qWB-db-GPX"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="gradientView" destination="CTw-9n-beb" id="9hA-0q-iOh"/>
+                        <outlet property="diagonalGradientView" destination="CTw-9n-beb" id="4EG-1x-5Nh"/>
+                        <outlet property="horizontalGradientView" destination="qA2-df-wIU" id="3Nh-mG-lOG"/>
+                        <outlet property="verticalGradientView" destination="CaR-uH-aMv" id="T00-yp-eHU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-391" y="-113"/>
         </scene>
     </scenes>
 </document>

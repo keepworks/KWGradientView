@@ -10,12 +10,7 @@ import UIKit
 
 open class KWGradientView: UIView {
 
-	override init(frame: CGRect) {
-		super.init(frame: frame)
-		
-		// The Main Stuff
-	}
-	
+	// MARK: - Lifecycle
 	required public init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		
@@ -24,13 +19,7 @@ open class KWGradientView: UIView {
 
   // MARK: - Open Methods
 	open func addGradientLayerAlongXAxis(colors: [UIColor]) -> CAGradientLayer {
-		let gradientColors = colors.map { (color) -> CGColor in
-			return color.cgColor
-		}
-
-		let gradient = CAGradientLayer()
-		gradient.frame = bounds
-		gradient.colors = gradientColors
+		let gradient = gradientFrom(colors: colors)
 		
 		gradient.startPoint = CGPoint(x: 0.0, y: 0)
 		gradient.endPoint = CGPoint(x: 1.0, y: 0.0)
@@ -41,13 +30,7 @@ open class KWGradientView: UIView {
 	}
 
   open func addGradientLayerAlongYAxis(colors: [UIColor]) -> CAGradientLayer {
-		let gradientColors = colors.map { (color) -> CGColor in
-			return color.cgColor
-		}
-
-    let gradient = CAGradientLayer()
-    gradient.frame = bounds
-    gradient.colors = gradientColors
+		let gradient = gradientFrom(colors: colors)
 
     gradient.startPoint = CGPoint(x: 0.0, y: 0)
     gradient.endPoint = CGPoint(x: 0.0, y: 1.0)
@@ -58,13 +41,7 @@ open class KWGradientView: UIView {
   }
 
   open func addDiagonalGradient(colors: [UIColor]) -> CAGradientLayer {
-		let gradientColors = colors.map { (color) -> CGColor in
-			return color.cgColor
-		}
-		
-    let gradient = CAGradientLayer()
-    gradient.frame = bounds
-    gradient.colors = gradientColors
+    let gradient = gradientFrom(colors: colors)
 
     gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
     gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
@@ -75,17 +52,28 @@ open class KWGradientView: UIView {
   }
 	
   open func updateDiagonalGradient(_ layer: CAGradientLayer, colors: [UIColor]) {
-		let gradientColors = colors.map { (color) -> CGColor in
-			return color.cgColor
-		}
-
     UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
       CATransaction.begin()
       CATransaction.setAnimationDuration(1.0)
       
-      layer.colors = gradientColors
+			layer.colors = colors.map { (color) -> CGColor in
+				return color.cgColor
+			}
       
       CATransaction.commit()
     }, completion: nil)
   }
+	
+	// MARK: - Private Methods
+	private func gradientFrom(colors: [UIColor]) -> CAGradientLayer {
+		let gradientColors = colors.map { (color) -> CGColor in
+			return color.cgColor
+		}
+		
+		let gradient = CAGradientLayer()
+		gradient.frame = bounds
+		gradient.colors = gradientColors
+
+		return gradient
+	}
 }
