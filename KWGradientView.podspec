@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'KWGradientView'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Subclass of UIView to add gradient to your views'
 
   s.description      = <<-DESC
