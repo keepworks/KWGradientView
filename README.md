@@ -65,7 +65,7 @@ KeepWorks, ios@keepworks.com
 
 ## Credits
 
-KWGradientView is owned and maintained by the [KeepWorks](http://www.keepworks.com/).
+KWGradientView is owned and maintained by [KeepWorks](http://www.keepworks.com/).
 
 [![N|Solid](http://www.keepworks.com/assets/logo-800bbf55fabb3427537cf669dc8cd018.png)](http://www.keepworks.com/)
 
