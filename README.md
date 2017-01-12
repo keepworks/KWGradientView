@@ -31,30 +31,9 @@ pod "KWGradientView"
 #### Example with Horizontal Gradient
 
 ```swift
-let gradientColors = [
-[UIColor.red, UIColor.green, UIColor.blue],
-[UIColor.green, UIColor.blue, UIColor.red],
-[UIColor.blue, UIColor.red, UIColor.green]
-]
+@IBOutlet weak var gradientView: KWGradientView!
 
-@IBOutlet weak var horizontalGradientView: KWGradientView!
-
-var horizontalGradientLayer: CAGradientLayer!
-var horizontalIndex = 0
-
-func configureGradients() {
-let gradientColors = [UIColor.red, UIColor.green, UIColor.blue]
-horizontalGradientLayer = horizontalGradientView.addGradientLayerAlongXAxis(colors: gradientColors)
-}
-
-@IBAction func updateHorizontalGradient(_ sender: Any) {
-horizontalIndex += 1
-if horizontalIndex > 2 {
-horizontalIndex = 0
-}
-
-horizontalGradientView.animateGradient(horizontalGradientLayer, to: gradientColors[horizontalIndex])
-}
+gradientView.addGradientLayerAlongXAxis(colors: [UIColor.red, UIColor.green, UIColor.blue])
 ```
 
 All the methods in the pod are implemented in [`GradientsViewController.swift`](https://github.com/keepworks/KWGradientView/blob/master/KWGradientView/GradientsViewController.swift) for your reference.
