@@ -1,6 +1,6 @@
 # KWGradientView
 
-<img src="screencast.gif" width="187" height="333">
+<img src="ScreenShots/screencast.gif" width="187" height="333">
 
 [![Build Status](https://www.bitrise.io/app/d54da2ec7c9a0496.svg?token=kBv75DKdduTDchGW4zK06g&branch=master)](https://www.bitrise.io/app/d54da2ec7c9a0496)
 [![Version](https://img.shields.io/cocoapods/v/KWGradientView.svg?style=flat)](http://cocoapods.org/pods/KWGradientView)
@@ -25,10 +25,18 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "KWGradientView"
 ```
+
 ## How to use
 
+#### Add the class KWGradientView to View on storyboard
 
-#### Example with Horizontal Gradient
+![Adding KWGradientView](ScreenShots/addingKWGradientView.png)
+
+#### Modifying color and gradient style using storyboard
+
+![Modify in storyboard](ScreenShots/modifyByStoryboard.png)
+
+#### Or Modify Programmatically: Example with Horizontal Gradient
 
 ```swift
 @IBOutlet weak var gradientView: KWGradientView!

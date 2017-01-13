@@ -8,7 +8,48 @@
 
 import UIKit
 
-open class KWGradientView: UIView {
+@IBDesignable open class KWGradientView: UIView {
+
+  // MARK: - Enumeration
+  enum GradientStyle: Int {
+    case horizontal = 0
+    case diagonal = 1
+    case vertical = 2
+  }
+
+  // MARK: - IBInspectables
+  @IBInspectable open var gradientStyle:Int = 0 {
+    didSet {
+      if let currentGradientStyle = GradientStyle(rawValue: (abs(gradientStyle) % 3)) {
+        self.currentGradientStyle = currentGradientStyle
+      }
+    }
+  }
+
+  @IBInspectable open var gradientColor1: UIColor = UIColor.red {
+    didSet {
+      updateGradient()
+    }
+  }
+
+  @IBInspectable open var gradientColor2: UIColor = UIColor.blue {
+    didSet {
+      updateGradient()
+    }
+  }
+
+  @IBInspectable open var gradientColor3: UIColor = UIColor.green {
+    didSet {
+      updateGradient()
+    }
+  }
+
+  // MARK: - Variables
+  var currentGradientStyle: GradientStyle = .horizontal {
+    didSet {
+      updateGradient()
+    }
+  }
 
   // MARK: - Open Methods
   open func addGradientLayerAlongXAxis(colors: [UIColor]) -> CAGradientLayer {
@@ -17,7 +58,8 @@ open class KWGradientView: UIView {
     gradient.startPoint = CGPoint(x: 0.0, y: 0)
     gradient.endPoint = CGPoint(x: 1.0, y: 0.0)
 
-    layer.insertSublayer(gradient, at: 0)
+    self.layer.sublayers?.removeAll()
+    layer.addSublayer(gradient)
 
     return gradient
   }
@@ -28,7 +70,8 @@ open class KWGradientView: UIView {
     gradient.startPoint = CGPoint(x: 0.0, y: 0)
     gradient.endPoint = CGPoint(x: 0.0, y: 1.0)
 
-    layer.insertSublayer(gradient, at: 0)
+    self.layer.sublayers?.removeAll()
+    layer.addSublayer(gradient)
 
     return gradient
   }
@@ -39,6 +82,7 @@ open class KWGradientView: UIView {
     gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
     gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
 
+    self.layer.sublayers?.removeAll()
     layer.addSublayer(gradient)
 
     return gradient
@@ -58,6 +102,17 @@ open class KWGradientView: UIView {
   }
 
   // MARK: - Private Methods
+  private func updateGradient() {
+    switch currentGradientStyle {
+    case .horizontal:
+      _ = self.addGradientLayerAlongXAxis(colors: [gradientColor1, gradientColor2, gradientColor3])
+    case .diagonal:
+      _ = self.addDiagonalGradient(colors: [gradientColor1, gradientColor2, gradientColor3])
+    case .vertical:
+      _ = self.addGradientLayerAlongYAxis(colors: [gradientColor1, gradientColor2, gradientColor3])
+    }
+  }
+
   private func gradientFrom(colors: [UIColor]) -> CAGradientLayer {
     let gradientColors = colors.map { (color) -> CGColor in
       return color.cgColor
