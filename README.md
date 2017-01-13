@@ -44,6 +44,8 @@ pod "KWGradientView"
 gradientView.addGradientLayerAlongXAxis(colors: [UIColor.red, UIColor.green, UIColor.blue])
 ```
 
+Also we can add any number of colors by adding them to the array of colors.
+
 All the methods in the pod are implemented in [`GradientsViewController.swift`](https://github.com/keepworks/KWGradientView/blob/master/KWGradientView/GradientsViewController.swift) for your reference.
 
 ## Author
