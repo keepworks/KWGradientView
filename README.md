@@ -1,6 +1,6 @@
 # KWGradientView
 
-<img src="ScreenShots/screencast.gif" width="187" height="333">
+![Screen Cast](ScreenShots/screencast.gif)
 
 [![Build Status](https://www.bitrise.io/app/d54da2ec7c9a0496.svg?token=kBv75DKdduTDchGW4zK06g&branch=master)](https://www.bitrise.io/app/d54da2ec7c9a0496)
 [![Version](https://img.shields.io/cocoapods/v/KWGradientView.svg?style=flat)](http://cocoapods.org/pods/KWGradientView)
