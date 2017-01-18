@@ -18,10 +18,10 @@ import UIKit
   }
 
   // MARK: - IBInspectables
-  @IBInspectable open var gradientStyle:Int = 0 {
+  @IBInspectable open var gradientStyle: Int = 0 {
     didSet {
-      if let currentGradientStyle = GradientStyle(rawValue: (abs(gradientStyle) % 3)) {
-        self.currentGradientStyle = currentGradientStyle
+      if let selectedGradientStyle = GradientStyle(rawValue: (abs(gradientStyle) % 3)) {
+        currentGradientStyle = selectedGradientStyle
       }
     }
   }
@@ -58,7 +58,7 @@ import UIKit
     gradient.startPoint = CGPoint(x: 0.0, y: 0)
     gradient.endPoint = CGPoint(x: 1.0, y: 0.0)
 
-    self.layer.sublayers?.removeAll()
+    layer.sublayers?.removeAll()
     layer.addSublayer(gradient)
 
     return gradient
@@ -70,7 +70,7 @@ import UIKit
     gradient.startPoint = CGPoint(x: 0.0, y: 0)
     gradient.endPoint = CGPoint(x: 0.0, y: 1.0)
 
-    self.layer.sublayers?.removeAll()
+    layer.sublayers?.removeAll()
     layer.addSublayer(gradient)
 
     return gradient
@@ -82,7 +82,7 @@ import UIKit
     gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
     gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
 
-    self.layer.sublayers?.removeAll()
+    layer.sublayers?.removeAll()
     layer.addSublayer(gradient)
 
     return gradient
@@ -105,11 +105,11 @@ import UIKit
   private func updateGradient() {
     switch currentGradientStyle {
     case .horizontal:
-      _ = self.addGradientLayerAlongXAxis(colors: [gradientColor1, gradientColor2, gradientColor3])
+      _ = addGradientLayerAlongXAxis(colors: [gradientColor1, gradientColor2, gradientColor3])
     case .diagonal:
-      _ = self.addDiagonalGradient(colors: [gradientColor1, gradientColor2, gradientColor3])
+      _ = addDiagonalGradient(colors: [gradientColor1, gradientColor2, gradientColor3])
     case .vertical:
-      _ = self.addGradientLayerAlongYAxis(colors: [gradientColor1, gradientColor2, gradientColor3])
+      _ = addGradientLayerAlongYAxis(colors: [gradientColor1, gradientColor2, gradientColor3])
     }
   }
 
