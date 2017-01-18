@@ -13,7 +13,18 @@
 		D1FB3BCA1DFA879800476FD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1FB3BC81DFA879800476FD8 /* LaunchScreen.storyboard */; };
 		D1FB3BD31DFA880000476FD8 /* KWGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FB3BD21DFA880000476FD8 /* KWGradientView.swift */; };
 		D1FB3BD51DFA94FD00476FD8 /* GradientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FB3BD41DFA94FD00476FD8 /* GradientsViewController.swift */; };
+		D1FD8BEF1E27C06100F02A3F /* KWGradientViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FD8BEE1E27C06100F02A3F /* KWGradientViewUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D1FD8BF11E27C06100F02A3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1FB3BB41DFA879800476FD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1FB3BBB1DFA879800476FD8;
+			remoteInfo = KWGradientView;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D1FB3BBC1DFA879800476FD8 /* KWGradientView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KWGradientView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +35,20 @@
 		D1FB3BCB1DFA879800476FD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1FB3BD21DFA880000476FD8 /* KWGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWGradientView.swift; sourceTree = "<group>"; };
 		D1FB3BD41DFA94FD00476FD8 /* GradientsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientsViewController.swift; sourceTree = "<group>"; };
+		D1FD8BEC1E27C06100F02A3F /* KWGradientViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KWGradientViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1FD8BEE1E27C06100F02A3F /* KWGradientViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWGradientViewUITests.swift; sourceTree = "<group>"; };
+		D1FD8BF01E27C06100F02A3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D1FB3BB91DFA879800476FD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1FD8BE91E27C06100F02A3F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				D1FB3BBE1DFA879800476FD8 /* KWGradientView */,
+				D1FD8BED1E27C06100F02A3F /* KWGradientViewUITests */,
 				D1FB3BBD1DFA879800476FD8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				D1FB3BBC1DFA879800476FD8 /* KWGradientView.app */,
+				D1FD8BEC1E27C06100F02A3F /* KWGradientViewUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +98,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D1FD8BED1E27C06100F02A3F /* KWGradientViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D1FD8BEE1E27C06100F02A3F /* KWGradientViewUITests.swift */,
+				D1FD8BF01E27C06100F02A3F /* Info.plist */,
+			);
+			path = KWGradientViewUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -95,19 +127,42 @@
 			productReference = D1FB3BBC1DFA879800476FD8 /* KWGradientView.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D1FD8BEB1E27C06100F02A3F /* KWGradientViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1FD8BF51E27C06100F02A3F /* Build configuration list for PBXNativeTarget "KWGradientViewUITests" */;
+			buildPhases = (
+				D1FD8BE81E27C06100F02A3F /* Sources */,
+				D1FD8BE91E27C06100F02A3F /* Frameworks */,
+				D1FD8BEA1E27C06100F02A3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1FD8BF21E27C06100F02A3F /* PBXTargetDependency */,
+			);
+			name = KWGradientViewUITests;
+			productName = KWGradientViewUITests;
+			productReference = D1FD8BEC1E27C06100F02A3F /* KWGradientViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D1FB3BB41DFA879800476FD8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0810;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = KeepWorks;
 				TargetAttributes = {
 					D1FB3BBB1DFA879800476FD8 = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
+					};
+					D1FD8BEB1E27C06100F02A3F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D1FB3BBB1DFA879800476FD8;
 					};
 				};
 			};
@@ -125,6 +180,7 @@
 			projectRoot = "";
 			targets = (
 				D1FB3BBB1DFA879800476FD8 /* KWGradientView */,
+				D1FD8BEB1E27C06100F02A3F /* KWGradientViewUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -137,6 +193,13 @@
 				D1FB3BCA1DFA879800476FD8 /* LaunchScreen.storyboard in Resources */,
 				D1FB3BC71DFA879800476FD8 /* Assets.xcassets in Resources */,
 				D1FB3BC51DFA879800476FD8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1FD8BEA1E27C06100F02A3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +216,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D1FD8BE81E27C06100F02A3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1FD8BEF1E27C06100F02A3F /* KWGradientViewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D1FD8BF21E27C06100F02A3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1FB3BBB1DFA879800476FD8 /* KWGradientView */;
+			targetProxy = D1FD8BF11E27C06100F02A3F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D1FB3BC31DFA879800476FD8 /* Main.storyboard */ = {
@@ -294,6 +373,34 @@
 			};
 			name = Release;
 		};
+		D1FD8BF31E27C06100F02A3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				INFOPLIST_FILE = KWGradientViewUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keepworks.KWGradientViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = KWGradientView;
+			};
+			name = Debug;
+		};
+		D1FD8BF41E27C06100F02A3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				INFOPLIST_FILE = KWGradientViewUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keepworks.KWGradientViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = KWGradientView;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -314,6 +421,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D1FD8BF51E27C06100F02A3F /* Build configuration list for PBXNativeTarget "KWGradientViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1FD8BF31E27C06100F02A3F /* Debug */,
+				D1FD8BF41E27C06100F02A3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
