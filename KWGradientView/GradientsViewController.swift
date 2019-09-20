@@ -16,7 +16,7 @@ class GradientsViewController: UIViewController {
     [UIColor.green, UIColor.blue, UIColor.red],
     [UIColor.blue, UIColor.red, UIColor.green]
   ]
-  
+
   // MARK: - IBOutlets
   @IBOutlet weak var horizontalGradientView: KWGradientView!
   @IBOutlet weak var diagonalGradientView: KWGradientView!
@@ -29,7 +29,7 @@ class GradientsViewController: UIViewController {
   var horizontalIndex = 0
   var diagonalIndex = 0
   var verticalIndex = 0
-  
+
   // MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -43,7 +43,7 @@ class GradientsViewController: UIViewController {
     if horizontalIndex > 2 {
       horizontalIndex = 0
     }
-    
+
     horizontalGradientView.animateGradient(horizontalGradientLayer, to: gradientColors[horizontalIndex])
   }
 
@@ -61,7 +61,7 @@ class GradientsViewController: UIViewController {
     if verticalIndex > 2 {
       verticalIndex = 0
     }
-    
+
     verticalGradientView.animateGradient(verticalGradientLayer, to: gradientColors[verticalIndex])
   }
 
@@ -73,4 +73,3 @@ class GradientsViewController: UIViewController {
     verticalGradientLayer = verticalGradientView.addGradientLayerAlongYAxis(colors: gradientColors)
   }
 }
-

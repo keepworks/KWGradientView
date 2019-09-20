@@ -89,7 +89,7 @@ import UIKit
   }
 
   open func animateGradient(_ layer: CAGradientLayer, to colors: [UIColor]) {
-    UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+    UIView.animate(withDuration: 1, delay: 0, options: UIView.AnimationOptions.curveEaseIn, animations: {
       CATransaction.begin()
       CATransaction.setAnimationDuration(1.0)
 
