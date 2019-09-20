@@ -14,8 +14,8 @@
 
 ## Requirements
 
-- iOS 8.0 or later
-- Swift 3.0
+- iOS 10.0 or later
+- Swift 5
 
 ## Installation
 
